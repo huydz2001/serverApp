@@ -1,0 +1,59 @@
+# Đăng ký người dùng
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "userName": "Vanw zzzz",
+  "email": "2",
+  "password": "1",
+  "img": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg"
+}
+
+###
+
+# Đăng nhập
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "email": "2@gmail.com",
+  "password": "1",
+  "fcm":"dSmphpyHRDyAfBbQUGRZ-h:APA91bFVtKj8otbOHt_e_wdHTkZNVxcXKp-udX6Bwx-Forvnr2svgyeTeSsMUJRvsUf_hD6VBnVM3lYjFtHcJ2KpE8d05dU2yI3akWEWAqOcemsbXGRGirMyz0ddNy2lvf83TIlaWe9a"
+}
+
+###
+
+# Cập nhật thông tin cá nhân
+PATCH http://localhost:3000/user/update/659d70dfd9b0257cdeeb66e5
+Content-Type: application/json
+
+{
+  "userName": "aa",
+  "img": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg",
+  "email":"22asas@gmail.com"
+}
+
+### Cập nhật thông tin cá nhân
+PATCH https://sever-task-manager.onrender.com/user/changePassword/659d70dfd9b0257cdeeb66e5
+Content-Type: application/json
+
+{
+  "oldPassword":"1@gmail.com", 
+  "newPassword":"1"
+}
+### DeleteAll
+DELETE  http://localhost:3000/user/deleteAllUsers
+Content-Type: application/json
+
+### 
+PATCH http://localhost:3000/user/logout/65a2568f009dfc7bab26015c
+Content-Type: application/json
+
+
+###
+GET  http://localhost:3000/user/allUsers
+###
+POST  http://localhost:3000/user/allUsers
+
+###
+PATCH   http://localhost:3000/user/update/65a376f6aaee886cc40670c9

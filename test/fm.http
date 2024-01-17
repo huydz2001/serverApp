@@ -1,0 +1,87 @@
+## Tạo gia đình mới
+POST http://localhost:3000/family/create
+Content-Type: application/json
+
+{
+  "name": "Android challenge",
+  "image": "",
+  "createBy": {
+    "_id": "65a2568f009dfc7bab26015c",
+    "userName": "Văn Thành Hoàng",
+    "email": "1@gmail.com",
+    "image": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg",
+    "fcm": "dSmphpyHRDyAfBbQUGRZ-h:APA91bFVtKj8otbOHt_e_wdHTkZNVxcXKp-udX6Bwx-Forvnr2svgyeTeSsMUJRvsUf_hD6VBnVM3lYjFtHcJ2KpE8d05dU2yI3akWEWAqOcemsbXGRGirMyz0ddNy2lvf83TIlaWe9a"
+  },
+  "newMembers": [{
+    "_id": "65a25943bc567e257a02fe1c",
+    "userName": "Hoàng Văn Long",
+    "email": "2@gmail.com",
+    "image": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg",
+    "fcm": "dSmphpyHRDyAfBbQUGRZ-h:APA91bFVtKj8otbOHt_e_wdHTkZNVxcXKp-udX6Bwx-Forvnr2svgyeTeSsMUJRvsUf_hD6VBnVM3lYjFtHcJ2KpE8d05dU2yI3akWEWAqOcemsbXGRGirMyz0ddNy2lvf83TIlaWe9a"
+  }]
+}
+
+
+###
+
+# Lấy thông tin gia đình
+GET http://localhost:3000/family/659d783a77408cb12f888ae8
+###
+
+# Xoá gia đình
+DELETE http://localhost:3000/family/delete/659e20a45da16547233431dc
+
+
+###
+# Cập nhật ảnh gia đình
+PATCH http://localhost:3000/family/updateImage/659d783a77408cb12f888ae8
+Content-Type: application/json
+
+{
+     "image": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg"
+}
+
+###
+# Add member to family
+POST http://localhost:3000/family/addMembers/add/65a2b88300c28ff1fdff22c5
+Content-Type: application/json
+
+{
+  "members": [{
+    "id": "659d77d32da0e7be026ce7df",
+    "userName": "HienHo2",
+    "email": "12",
+    "image": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg"
+  }]
+}
+
+
+###
+
+# Remove member from family
+DELETE http://localhost:3000/family/your-family-id/removeMember/your-member-id
+
+###
+PATCH http://localhost:3000/task/taskId/update
+Content-Type: application/json
+
+{
+  "title": "Task sửa",
+  "detail": "Mô tả task sau sửa",
+  "timeStart": "2024-01-01T09:00:00.000Z",
+  "timeEnd": "2024-01-01T11:00:00.000Z",
+  "members": [],
+  "status": "Completed",
+  "createBy": "creatorId2"
+}
+###
+# Lấy danh sách gia đình theo userId
+GET http://localhost:3000/family/getUserFamilies/65a25cda8c4d4d93b1092a07
+###
+# Lấy danh sách tất cả gia đình
+GET http://localhost:3000/family/get/getAll
+
+###
+###
+# Lấy danh sách tất cả gia đình
+DELETE http://localhost:3000/family/deleteAll/del

@@ -1,0 +1,64 @@
+### Tạo task mới
+POST http://localhost:3000/task/create
+Content-Type: application/json
+
+{
+  "title": "Task mới",
+  "detail": "Chi tiết task",
+  "timeStart": "2024-01-10T08:00:00.000Z",
+  "timeEnd": "2024-01-10T12:00:00.000Z",
+  "members": [
+   {
+          "userName": "thanh1",
+          "email": "thanh@gmail.com",
+          "fcm": "d2aVcILdS7uxc2Q_e8DBVb:APA91bHaPFII6V45byaL9KEA1ZLZjOU2w2Ue2CWfU3BgyhaD8iE24JQ3hwEx5fgCbGkY3TvP7vWEXdS6VV6gCscX9CLWcSIACvLSrZ35EV1hqI_ym94wZ2eOXFniishqmgGGYQGUj0cf",
+          "_id": "65a2ac63b85401dc0ea5e44b",
+          "createdAt": "2024-01-13T16:07:30.237Z",
+          "updatedAt": "2024-01-13T16:07:30.237Z"
+        }
+  ],
+  "status": "Pending",
+  "createBy": {
+          "userName": "Hoàng Văn Long",
+          "email": "2@gmail.com",
+          "password": "$2b$10$9zoAn0YpqP/oVPS.Fca4PuYjsTVTYK.wjPihxB0je/eGjc079IxyO",
+          "img": "https://cafebiz.cafebizcdn.vn/162123310254002176/2022/3/21/photo-1-1647830052032281626260.jpg",
+          "fcm": "dSmphpyHRDyAfBbQUGRZ-h:APA91bFVtKj8otbOHt_e_wdHTkZNVxcXKp-udX6Bwx-Forvnr2svgyeTeSsMUJRvsUf_hD6VBnVM3lYjFtHcJ2KpE8d05dU2yI3akWEWAqOcemsbXGRGirMyz0ddNy2lvf83TIlaWe9a",
+          "_id": "65a25943bc567e257a02fe1c",
+          "createdAt": "2024-01-13T09:34:59.694Z",
+          "updatedAt": "2024-01-13T09:34:59.694Z",
+          "__v": 0
+        },
+  "familyId": "65a2b54200c28ff1fdff21af"
+}
+
+### lay danh sach task
+GET http://localhost:3000/task/familyTasks/659d783a77408cb12f888ae8
+
+### xoa task
+DELETE http://localhost:3000/task/659e423b33b46aeefa3d66ca/delete
+
+### sua task
+POST  https://sever-task-manager.onrender.com/task/65a2ac63b85401dc0ea5e44b/update
+Content-Type: application/json
+
+{
+  "title": "Task cập nhật",
+  "detail": "Chi tiết task cập nhật2",
+  "timeStart": "2024-01-11T08:00:00.000Z",
+  "timeEnd": "2024-01-11T12:00:00.000Z",
+  "members": [
+   {
+            "userName": "HienHo3",
+            "email": "13",
+            "_id": "659d783a77408cb12f888aeb"
+   }
+  ],
+  "status": "doing",
+  "createBy": {
+            "userName": "HienHo3",
+            "email": "13",
+            "_id": "659d783a77408cb12f888aeb"
+  },
+  "familyId": "65a2b54200c28ff1fdff21af"
+}
